@@ -21,3 +21,18 @@ public:
         return true;
     }
 };
+
+//use vector unstead of hash
+class Solution {
+public:
+	bool isAnagram(string s, string t) {
+		if (s.size() != t.size()) return false;
+		vector<int> hash(256, 0);
+		for (auto i : s) hash[i]++;
+		for (auto i : t) {
+			if (hash[i] > 0) hash[i]--;
+			else return false;
+		}
+		return true;
+	}
+};
