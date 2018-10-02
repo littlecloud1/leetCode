@@ -32,7 +32,6 @@ public:
                 }
                 l = l >=0? l+1:0;
                 if(r-l > longest.size()) longest = s.substr(l,r-l);
-               // cout<<i <<" "<<r<<" "<<l<<" "<<longest<<endl;
             }
             
         }
