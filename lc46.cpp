@@ -62,3 +62,29 @@ public:
 	}
 
 };
+
+//leetcode 46
+class Solution {
+public:
+	vector<vector<int>> permute(vector<int>& nums) {
+		vector<vector<int>> result;
+		dfs(nums, 0, result);
+		return result;
+	}
+
+	void dfs(vactor<int> nums, int pos, vector<vector<int>> & result) {
+		if (pos >= nums.size()) {
+			result.push_back(num);
+			return;
+		}
+		for (int i = pos; i < nums.size(); i++) {
+			swap(num[pos], num[i]);
+			dfs(nums, pos + 1, result);
+			swap(num[pos], num[i]);
+
+		}
+
+
+	}
+
+};
